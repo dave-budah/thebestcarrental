@@ -14,19 +14,7 @@ import {MatIconButton} from "@angular/material/button";
   styleUrl: './home.component.css'
 })
 export class HomeComponent  {
-  currentYear = new Date().getFullYear();
 
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const header = document.getElementById('header');
-    if (header) {
-      if ((window.pageYOffset) > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
-  }
 
 }

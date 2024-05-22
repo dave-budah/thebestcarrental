@@ -62,12 +62,14 @@ button, .btn {
   outline: 0 !important;
   box-shadow: none !important;
   font-weight: 500;
-  transition: var(--transition);
+  transition: all 0.3s;
 }
 button:hover, .btn:hover {
-  transform: scale(1.01);
+  transform: translateY(-4px);
 }
-
+section#hero.hero {
+  height: 50svh;
+}
 header {
   background: transparent;
   transition: background 0.3s;
@@ -107,9 +109,11 @@ nav.navbar .navbar-nav li.nav-item .nav-link::after {
   left: 50%;
   transform: translateX(-50%);
 }
+nav.navbar .navbar-nav li.nav-item .nav-link.active,
 nav.navbar .navbar-nav li.nav-item .nav-link:hover {
   color: #f3951d !important;
 }
+nav.navbar .navbar-nav li.nav-item .nav-link.active::after,
 nav.navbar .navbar-nav li.nav-item .nav-link:hover::after {
   width: 100%;
 }
@@ -244,7 +248,7 @@ nav.navbar button:hover {
   font-size: 1.4rem !important;
 }
 
-@media only screen and (min-width: 992px) {
+@media (width >= 992px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
     animation: growOut 300ms ease-in-out forwards;
@@ -315,6 +319,7 @@ section#hero .container .hero__content h5 {
   font-size: var(--font-size-base);
   line-height: 1.5;
 }
+
 section#hero .container .hero__content h1 {
   font-size: var(--font-size-xxl);
   font-weight: 800;
@@ -352,24 +357,40 @@ section#mission h5 {
   text-transform: uppercase;
   color: var(--primary-yellow);
   line-height: 1.5;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#mission h3 {
   font-weight: 700;
   font-size: var(--font-size-xxl);
   line-height: 1.5;
   color: var(--primary-gray);
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#mission p {
   font-size: var(--font-size-sm);
   color: var(--secondary-gray);
   line-height: 1.5;
   font-weight: 500;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#mission .img-box {
   width: 80%;
   height: 300px;
   background: var(--primary-yellow);
   position: relative;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#mission .img-box img {
   position: absolute;
@@ -386,6 +407,9 @@ section#makeItHappen {
 }
 .title-section {
   margin: 2rem 0;
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .title-section h5 {
   text-transform: uppercase;
@@ -410,6 +434,10 @@ section#makeItHappen {
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .step-detail h5 {
   font-size: var(--font-size-base);
@@ -417,12 +445,20 @@ section#makeItHappen {
   text-transform: capitalize;
   line-height: 1.5;
   color: var(--primary-gray);
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .step-detail p {
   font-size: var(--font-size-sm);
   font-weight: 500;
   line-height: 1.5;
   color: var(--secondary-gray);
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 
 section#whyUs {
@@ -451,6 +487,18 @@ section#whyUs .why__content {
 }
 section#whyUs .why__content h3 {
   font-size: var(--font-size-lg);
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
+}
+section#whyUs .why__content p {
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .cta-buttons {
   margin-top: 1rem;
@@ -517,6 +565,10 @@ section#catalogue .vehicle__image:hover img {
   font-weight: 700;
   font-size: var(--font-size-base);
   margin-bottom: 1rem;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#contactForm {
   padding: 4rem 0;
@@ -540,11 +592,19 @@ section#contactForm::after {
 section#contactForm h5 {
   font-size: var(--font-size-lg);
   font-weight: 700;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 section#contactForm p {
   color: var(--off-white);
   font-size: var(--font-size-sm);
   font-weight: 500;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .contact-detail h5 {
   font-weight: 700;
@@ -558,6 +618,10 @@ section#contactForm p {
   font-size: var(--font-size-sm);
   font-weight: 500;
   background: transparent !important;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .booking__form {
   margin-left: auto;
@@ -781,6 +845,10 @@ section#blogSection {
 }
 .blog-card .card__content {
   padding: 10px 0;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .blog-card .card__content h5 {
   font-size: var(--font-size-base);
@@ -808,6 +876,10 @@ section#blogSection {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  animation: cssScrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%
 }
 .blog-card .card__footer .thumbnail-small {
   width: 40px;
@@ -831,18 +903,20 @@ footer .footer-floating {
   left: 50%;
   transform: translateX(-50%);
   background: var(--secondary-gray);
-  padding: 1rem 2rem;
+  width: 70%;
 
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
 }
 footer .footer-floating a {
   display: flex;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 1rem 2rem;
   align-items: center;
+  flex: 1 1 calc(25% - 20px);
   color: var(--off-white);
+  box-sizing: border-box;
 }
 footer .footer-floating a:not(:last-child) {
   border-right: 1px solid var(--off-white);
@@ -940,6 +1014,9 @@ footer .footer-bottom p {
 footer .footer-bottom p span {
   font-weight: 600;
 }
+section#about__us {
+  padding: 4rem 0;
+}
 
 
 
@@ -960,6 +1037,23 @@ footer .footer-bottom p span {
 
 
 
+
+
+
+
+
+
+
+
+
+@media (width <= 1366px) {
+  footer .footer-floating {
+    background: var(--secondary-gray);
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 80%;
+  }
+}
 @media (width <= 768px) {
   section#mission .img-box {
     margin: 2rem auto;
@@ -987,3 +1081,52 @@ footer .footer-bottom p span {
     display: none;
   }
 }
+
+@keyframes cssScrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 10px;
+  color: var(--primary-yellow);
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: var(--primary-yellow);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--off-white);
+}
+
+.breadcrumb-item.active {
+  color: var(--off-white);
+}
+
+.breadcrumb-item.active a {
+  pointer-events: none;
+  text-decoration: none;
+  color: #6c757d;
+}
+/* Breadcrumb */
